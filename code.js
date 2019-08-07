@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 
   //onClick for adding the gifs with the button click
-  $(".button").on("click", function () {
+  $(document).on("click", ".button", function () {
     var person = $(this).attr("data-person");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
       person + "&api_key=dSUbO9QtEKXZOGiknY1zHY00lnCU27i5&limit=10&rating=g&rating=pg";
