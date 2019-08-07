@@ -72,16 +72,21 @@ $(document).ready(function () {
   });
 
   $("#submitbtn").on("click", function () {
-    event.preventDefault();
-    var newButton = $("#disneyShow").val().trim();
-    console.log(newButton);
+    if ($("#disneyShow").val() === "") {
+      event.preventDefault();
+      alert("Empty Selction. Try Again!");
+    } else {
+      event.preventDefault();
+      var newButton = $("#disneyShow").val().trim();
+      console.log(newButton);
 
-    topics.push(newButton);
-    console.log(topics);
-    $("#disneyShow").val("");
+      topics.push(newButton);
+      console.log(topics);
+      $("#disneyShow").val("");
 
-    var showTime = $("<button>");
-    showTime.append(newButton).attr("class", "button").attr("data-person", newButton);
-    $("#buttons").append(showTime);
+      var showTime = $("<button>");
+      showTime.append(newButton).attr("class", "button m-1").attr("data-person", newButton);
+      $("#buttons").append(showTime);
+    }
   })
 });
