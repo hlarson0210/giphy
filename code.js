@@ -75,8 +75,7 @@ $(document).ready(function () {
     event.preventDefault();
     var newButton = $("#disneyShow").val().trim();
     console.log(newButton);
-    //push to array of shows
-    //this will add the attr's to the button
+
     topics.push(newButton);
     console.log(topics);
     $("#disneyShow").val("");
