@@ -41,10 +41,9 @@ $(document).ready(function () {
 
 
   //onClick for still -> animate
-  $(".gif").on("click", function () {
+  $(document).on("click", "img", function () {
     var state = $(this).attr("data-state");
     console.log(state);
-    console.log(this);
 
     if (state === "still") {
       $(this).attr("src", $(this).attr("data-animate"));
