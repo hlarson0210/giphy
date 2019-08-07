@@ -2,22 +2,6 @@ var topics = ["That's So Raven", "Kim Possible", "The Suite Life of Zack & Cody"
 
 $(document).ready(function () {
 
-  var showName = topics;
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + showName + "&api_key=dSUbO9QtEKXZOGiknY1zHY00lnCU27i5&limit=10";
-
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (topics) {
-    // this line is grabbing the data from the ajax call for initial onload of page
-    var show = topics.data;
-    for (var i = 0; i < show.length; i++) {
-
-    }
-
-  });
-
-
 
   //onClick for adding the gifs with the button click
   $(".button").on("click", function () {
@@ -48,7 +32,6 @@ $(document).ready(function () {
 
           gifDiv.prepend(p);
           gifDiv.prepend(personImage);
-          console.log(personImage);
 
           $("#gifs-appear-here").prepend(gifDiv);
         }
@@ -61,6 +44,7 @@ $(document).ready(function () {
   $(".gif").on("click", function () {
     var state = $(this).attr("data-state");
     console.log(state);
+    console.log(this);
 
     if (state === "still") {
       $(this).attr("src", $(this).attr("data-animate"));
