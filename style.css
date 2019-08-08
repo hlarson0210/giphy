@@ -1,0 +1,9 @@
+.jumbotron {
+    background-image: url("http://i3.wp.com/mickeyblog.com/wp-content/uploads/2018/09/Disney-Channel-logo-720x340.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+h1 {
+    color: rainbow;
+}
